@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "description": "First project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Илья Шалаев",
+            "email": "alex.280200@mail.ru"
+        }
+    ],
+    "require": {}
+}
