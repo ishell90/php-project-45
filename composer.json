@@ -12,5 +12,10 @@
             "email": "alex.280200@mail.ru"
         }
     ],
-    "require": {}
+    "license": "MIT",
+    "require": {},
+
+    "bin": [
+        "bin/brain-games"
+      ]
 }
