@@ -1,8 +1,10 @@
 #!/usr/bin/env php
-
 <?php
+
 use BrainGames\Cli;
+use BrainGames\Even;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 print_r(Cli\hello());
+print_r(Parity\parityone());
