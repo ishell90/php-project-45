@@ -6,5 +6,5 @@ use BrainGames\Even;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-print_r(Cli\hello());
-print_r(Parity\parityone());
+#print_r(Cli\hello());
+print_r(Even\parityone());
