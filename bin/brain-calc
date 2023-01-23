@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+use BrainGames\Games\Calc;
+use BrainGames\Hello;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+#print_r(Hello\Hello());
+print_r(Calc\calc());
