@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+use BrainGames\Games\progression;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+print_r(progression\progression());
