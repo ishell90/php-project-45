@@ -9,7 +9,8 @@
             "src/Cli.php",
             "src/Parity.php",
             "src/Games/Calc.php",
-            "src/Engine.php"
+            "src/Engine.php",
+            "src/Games/gcd.php"
         ]
     },
     "authors": [
@@ -26,7 +27,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
       ],
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*"
