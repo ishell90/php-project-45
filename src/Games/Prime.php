@@ -27,7 +27,7 @@ function prime()
                 $sum++;
             } else {
                 line("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                line("Let's try again, {$name}");
+                line("Let's try again, {$name}!");
                 break;
             }
         } else {

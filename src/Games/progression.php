@@ -46,7 +46,7 @@ function progression()
             $sum++;
         } else {
             line("{$otvet} is wrong answer ;(. Correct answer was {$memory}.");
-            line("Let's try again, {$name}");
+            line("Let's try again, {$name}!");
             break;
         }
         if ($sum === 3) {

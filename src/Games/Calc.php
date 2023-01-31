@@ -33,7 +33,7 @@ function calc()
                 $sum++;
             } else {
                 line("{$otvet} is wrong answer ;(. Correct answer was {$test}.");
-                line("Let's try again, {$name}");
+                line("Let's try again, {$name}!");
                 break;
             }
 
