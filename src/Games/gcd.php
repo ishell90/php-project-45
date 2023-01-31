@@ -18,7 +18,7 @@ function gcd()
             $test = '1';
         } else {
             for ($j = 0, $arr1 = [], $divider = 2, $first = $randOne; $first > 1; $j++) {
-            $oneProverka = $first % $divider;
+                $oneProverka = $first % $divider;
                 if ($oneProverka === 0) {
                     $first = $first / $divider;
                     $arr1[] = $divider;
