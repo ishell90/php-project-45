@@ -23,7 +23,7 @@ function calculation()
             $test = (string) ($randOne + $randTwo);
         } elseif ($signs[$randInSigns] === '-') {
                 $test = (string) ($randOne - $randTwo);
-        } elseif ($signs[$randInSigns] === '*') {
+        } else {
             $test = (string) ($randOne * $randTwo);
         }
 
