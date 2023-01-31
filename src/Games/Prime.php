@@ -11,9 +11,9 @@ function prime()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
-    for($i = 0, $sum = 0; $sum < 4; $i++) {
+    for ($i = 0, $sum = 0; $sum < 4; $i++) {
         $randNumber = rand(2, 100);
-        for($j = 2, $sum1 = 0; $j <= $randNumber; $j++) {
+        for ($j = 2, $sum1 = 0; $j <= $randNumber; $j++) {
             $test = $randNumber % $j;
             if ($test === 0) {
                 $sum1++;

@@ -11,11 +11,11 @@ function parityone()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line('Answer "yes" if the number is even, otherwise answer "no".');
-    for($i = 0, $sum = 0; $sum < 3; $i++) {
-    $rand = rand(0, 20);
-    line("Question: {$rand}");
-    $proverka = $rand % 2;
-    $otvet = prompt('Your answer');
+    for ($i = 0, $sum = 0; $sum < 3; $i++) {
+        $rand = rand(0, 20);
+        line("Question: {$rand}");
+        $proverka = $rand % 2;
+        $otvet = prompt('Your answer');
         if ($proverka === 0) {
             if ($otvet === 'yes') {
                 line('Correct!');
