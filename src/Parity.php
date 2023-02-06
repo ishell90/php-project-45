@@ -25,7 +25,7 @@ function parityone()
                 line("Let's try again, {$name}!");
                 break;
             }
-        } elseif ($proverka === 1) {
+        } else {
             if ($otvet === 'no') {
                 line('Correct!');
                 $sum++;

@@ -29,7 +29,7 @@ function progression()
                 $result = $randStart + ($j * 5);
                 $arr[] = $result;
                 $sum1++;
-            } elseif ($randProfile === 3) {
+            } else {
                 $result = $randStart + ($j * 7);
                 $arr[] = $result;
                 $sum1++;
