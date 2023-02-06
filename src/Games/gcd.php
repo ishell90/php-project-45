@@ -17,7 +17,8 @@ function gcd()
         if ($randOne === 1 || $randTwo === 1) {
             $test = '1';
         } else {
-            for ($j = 0, $arr1 = [], $divider = 2, $first = $randOne; $first > 1; $j++) {
+            $arr1 = [];
+            for ($j = 0, $divider = 2, $first = $randOne; $first > 1; $j++) {
                 $oneProverka = $first % $divider;
                 if ($oneProverka === 0) {
                     $first = $first / $divider;
@@ -27,7 +28,8 @@ function gcd()
                     $divider++;
                 }
             }
-            for ($z = 0, $arr2 = [], $divider2 = 2, $two = $randTwo; $two > 1; $z++) {
+            $arr2 = [];
+            for ($z = 0, $divider2 = 2, $two = $randTwo; $two > 1; $z++) {
                 $twoProverka = $two % $divider2;
                 if ($twoProverka === 0) {
                     $two = $two / $divider2;
@@ -37,8 +39,9 @@ function gcd()
                     $divider2++;
                 }
             }
-            for ($k = 0, $math1 = count($arr1), $arr3 = []; $k < $math1; $k++) {
-                if (in_array($arr1[$k], $arr2)) {
+            $arr3 = [];
+            for ($k = 0, $math1 = count($arr1); $k < $math1; $k++) {
+                if (in_array($arr1[$k], $arr2, false)) {
                     $arr3[] = $arr1[$k];
                     $m = array_search($arr1[$k], $arr2);
                     unset($arr2[$m]);
