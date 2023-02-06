@@ -41,9 +41,9 @@ function gcd()
             }
             $arr3 = [];
             for ($k = 0, $math1 = count($arr1); $k < $math1; $k++) {
-                if (in_array($arr1[$k], $arr2, false)) {
+                if (in_array($arr1[$k], $arr2, true)) {
                     $arr3[] = $arr1[$k];
-                    $m = array_search($arr1[$k], $arr2);
+                    $m = array_search($arr1[$k], $arr2, true);
                     unset($arr2[$m]);
                 }
             }
@@ -52,7 +52,7 @@ function gcd()
                 $test = '1';
             } elseif ($math2 === 1) {
                 $test = (string) $arr3[0];
-            } elseif ($math2 > 1) {
+            } else {
                 $test = (string) array_product($arr3);
             }
         }
