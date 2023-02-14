@@ -8,7 +8,7 @@ use function BrainGames\Hello\hello;
 
 use const BrainGames\Hello\GAME_WIN;
 
-const QUESTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+const QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function parityone()
 {
