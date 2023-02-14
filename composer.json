@@ -4,7 +4,7 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Parity.php",
+            "src/Games/Parity.php",
             "src/Games/Calc.php",
             "src/Engine.php",
             "src/Games/gcd.php",

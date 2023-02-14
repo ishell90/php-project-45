@@ -4,14 +4,16 @@ namespace BrainGames\Games\gcd;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Hello\hello;
+
+use const BrainGames\Hello\GAME_WIN;
+
+const QUESTION = "Find the greatest common divisor of given numbers.";
 
 function gcd()
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    line("Find the greatest common divisor of given numbers.");
-    for ($i = 0, $sum = 0; $sum < 3; $i++) {
+    $game = [];
+    for ($i = 0; $i < GAME_WIN; $i++) {
         $randOne = rand(1, 100);
         $randTwo = rand(1, 100);
         if ($randOne === 1 || $randTwo === 1) {
@@ -56,19 +58,8 @@ function gcd()
                 $test = (string) array_product($arr3);
             }
         }
-        line("Question: {$randOne} {$randTwo}");
-        $otvet = prompt('Your answer');
-        if ($test === $otvet) {
-            line('Correct!');
-            $sum++;
-        } else {
-            line("{$otvet} is wrong answer ;(. Correct answer was {$test}.");
-            line("Let's try again, {$name}!");
-            break;
-        }
-        if ($sum === 3) {
-            line("Congratulations, {$name}!");
-            break;
-        }
+        $question = "{$randOne} {$randTwo}";
+        $game[] = [$question, $test];
     }
+    hello(QUESTION, $game);
 }

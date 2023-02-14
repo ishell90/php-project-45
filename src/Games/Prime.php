@@ -4,46 +4,34 @@ namespace BrainGames\Games\prime;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Hello\hello;
+
+use const BrainGames\Hello\GAME_WIN;
+
+const QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+function isPrime(int $num): bool
+{
+    if ($num < 2) {
+        return false;
+    }
+
+    for ($i = 2; $i <= $num / 2; $i++) {
+        if ($num % $i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
 
 function prime()
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    line('Answer "yes" if given number is prime. Otherwise answer "no".');
-    for ($i = 0, $sum = 0; $sum < 4; $i++) {
+    $game = [];
+    for ($i = 0; $i < GAME_WIN; $i++) {
         $randNumber = rand(2, 100);
-        $sum1 = 0;
-        for ($j = 2; $j <= $randNumber; $j++) {
-            $test = $randNumber % $j;
-            if ($test === 0) {
-                $sum1++;
-            }
-        }
-        line("Question: {$randNumber}");
-        $otvet = prompt('Your answer');
-        if ($sum1 === 1) {
-            if ($otvet === 'yes') {
-                line('Correct!');
-                $sum++;
-            } else {
-                line("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                line("Let's try again, {$name}!");
-                break;
-            }
-        } else {
-            if ($otvet === 'no') {
-                line('Correct!');
-                $sum++;
-            } else {
-                line("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                line("Let's try again, {$name}!");
-                break;
-            }
-        }
-        if ($sum === 3) {
-            line("Congratulations, {$name}!");
-            break;
-        }
+        $test = isPrime($randNumber) ? 'yes' : 'no';
+        $game[] = [$randNumber, $test];
     }
+    hello(QUESTION, $game);
 }

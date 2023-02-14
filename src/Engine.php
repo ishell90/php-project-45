@@ -19,7 +19,7 @@ function hello(string $question, array $game)
         if ($otvet === $questionGood) {
             line('Correct!');
         } else {
-            line("{$otvet} is wrong answer ;(. Correct answer was {$questionGood}.");
+            line("'{$otvet}' is wrong answer ;(. Correct answer was '{$questionGood}'.");
             line("Let's try again, {$name}!");
             return;
         }
