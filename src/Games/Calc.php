@@ -5,6 +5,7 @@ namespace BrainGames\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Hello\hello;
+
 use const BrainGames\Hello\GAME_WIN;
 
 const QUESTION = "What is the result of the expression?";
