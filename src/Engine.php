@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const GAME_WIN = 3;
 
-function hello($question, $game)
+function hello(string $question, array $game)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
