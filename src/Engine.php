@@ -21,7 +21,7 @@ function hello(string $question, array $game)
         } else {
             line("{$otvet} is wrong answer ;(. Correct answer was {$questionGood}.");
             line("Let's try again, {$name}!");
-            break;
+            return;
         }
     }
     line("Congratulations, {$name}!");
