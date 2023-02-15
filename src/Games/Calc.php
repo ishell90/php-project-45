@@ -16,7 +16,7 @@ function calculation()
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randOne = rand(1, 30);
         $randTwo = rand(1, 30);
-        $signs = (array) ['+', '-', '*'];
+        $signs = ['+', '-', '*'];
         $randSign = array_rand($signs, 1);
         switch ($randSign) {
             case 0:
