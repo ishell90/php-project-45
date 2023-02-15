@@ -6,32 +6,35 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Hello\hello;
 
-use const BrainGames\Hello\GAME_WIN;
+use const BrainGames\Hello\ROUND_COUNT;
 
-const QUESTION = "What is the result of the expression?";
+const GAME_DESCRIPTION = "What is the result of the expression?";
 
 function calculation()
 {
     $game = [];
-    for ($i = 0; $i < GAME_WIN; $i++) {
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randOne = rand(1, 30);
         $randTwo = rand(1, 30);
-        $randInSigns = rand(0, 2);
-        $signs = array('+', '-', '*');
-
-        if ($signs[$randInSigns] === '+') {
-            $question = "{$randOne} + {$randTwo}";
-            $test = (string) ($randOne + $randTwo);
-            $game[] = [$question, $test];
-        } elseif ($signs[$randInSigns] === '-') {
-            $question = "{$randOne} - {$randTwo}";
-            $test = (string) ($randOne - $randTwo);
-            $game[] = [$question, $test];
-        } else {
-            $question = "{$randOne} * {$randTwo}";
-            $test = (string) ($randOne * $randTwo);
-            $game[] = [$question, $test];
+        $signs = (array) ['+', '-', '*'];
+        $randSign = array_rand($signs, 1);
+        switch ($randSign) {
+            case 0:
+                $question = "{$randOne} + {$randTwo}";
+                $correctAnswer = (string) ($randOne + $randTwo);
+                $game[] = [$question, $correctAnswer];
+                break;
+            case 1:
+                $question = "{$randOne} - {$randTwo}";
+                $correctAnswer = (string) ($randOne - $randTwo);
+                $game[] = [$question, $correctAnswer];
+                break;
+            case 2:
+                $question = "{$randOne} * {$randTwo}";
+                $correctAnswer = (string) ($randOne * $randTwo);
+                $game[] = [$question, $correctAnswer];
+                break;
         }
     }
-    hello(QUESTION, $game);
+    hello(GAME_DESCRIPTION, $game);
 }

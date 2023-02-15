@@ -6,18 +6,18 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Hello\hello;
 
-use const BrainGames\Hello\GAME_WIN;
+use const BrainGames\Hello\ROUND_COUNT;
 
-const QUESTION = "Find the greatest common divisor of given numbers.";
+const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function gcd()
 {
     $game = [];
-    for ($i = 0; $i < GAME_WIN; $i++) {
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randOne = rand(1, 100);
         $randTwo = rand(1, 100);
         if ($randOne === 1 || $randTwo === 1) {
-            $test = '1';
+            $correctAnswer = '1';
         } else {
             $arr1 = [];
             for ($j = 0, $divider = 2, $first = $randOne; $first > 1; $j++) {
@@ -51,15 +51,15 @@ function gcd()
             }
             $math2 = count($arr3);
             if ($math2 === 0) {
-                $test = '1';
+                $correctAnswer = '1';
             } elseif ($math2 === 1) {
-                $test = (string) $arr3[0];
+                $correctAnswer = (string) $arr3[0];
             } else {
-                $test = (string) array_product($arr3);
+                $correctAnswer = (string) array_product($arr3);
             }
         }
         $question = "{$randOne} {$randTwo}";
-        $game[] = [$question, $test];
+        $game[] = [$question, $correctAnswer];
     }
-    hello(QUESTION, $game);
+    hello(GAME_DESCRIPTION, $game);
 }

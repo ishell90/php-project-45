@@ -6,14 +6,14 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Hello\hello;
 
-use const BrainGames\Hello\GAME_WIN;
+use const BrainGames\Hello\ROUND_COUNT;
 
-const QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function parityone()
 {
     $game = [];
-    for ($i = 0; $i < GAME_WIN; $i++) {
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $rand = rand(0, 20);
         $proverka = $rand % 2;
         if ($proverka === 0) {
@@ -22,5 +22,5 @@ function parityone()
             $game[] = [$rand, 'no'];
         }
     }
-    hello(QUESTION, $game);
+    hello(GAME_DESCRIPTION, $game);
 }

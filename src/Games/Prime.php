@@ -6,9 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Hello\hello;
 
-use const BrainGames\Hello\GAME_WIN;
+use const BrainGames\Hello\ROUND_COUNT;
 
-const QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime(int $num): bool
 {
@@ -28,10 +28,10 @@ function isPrime(int $num): bool
 function prime()
 {
     $game = [];
-    for ($i = 0; $i < GAME_WIN; $i++) {
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randNumber = rand(2, 100);
-        $test = isPrime($randNumber) ? 'yes' : 'no';
-        $game[] = [$randNumber, $test];
+        $correctAnswer = isPrime($randNumber) ? 'yes' : 'no';
+        $game[] = [$randNumber, $correctAnswer];
     }
-    hello(QUESTION, $game);
+    hello(GAME_DESCRIPTION, $game);
 }
