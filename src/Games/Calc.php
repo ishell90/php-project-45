@@ -36,5 +36,5 @@ function calculation()
                 break;
         }
     }
-    hello(GAME_DESCRIPTION, $game);
+    hello(GAME_DESCRIPTION, $game) ;
 }
