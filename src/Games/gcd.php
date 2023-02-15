@@ -61,5 +61,5 @@ function gcd()
         $question = "{$randOne} {$randTwo}";
         $game[] = [$question, $correctAnswer];
     }
-    hello(GAME_DESCRIPTION, $game) ;
+    hello(GAME_DESCRIPTION, $game);
 }

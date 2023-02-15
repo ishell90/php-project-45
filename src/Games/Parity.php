@@ -22,5 +22,5 @@ function parityone()
             $game[] = [$rand, 'no'];
         }
     }
-    hello(GAME_DESCRIPTION, $game) ;
+    hello(GAME_DESCRIPTION, $game);
 }

@@ -33,5 +33,5 @@ function prime()
         $correctAnswer = isPrime($randNumber) ? 'yes' : 'no';
         $game[] = [$randNumber, $correctAnswer];
     }
-    hello(GAME_DESCRIPTION, $game) ;
+    hello(GAME_DESCRIPTION, $game);
 }
