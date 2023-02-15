@@ -39,5 +39,5 @@ function progression()
         $finish = implode(" ", $arr);
         $game[] = [$finish, $memory];
     }
-    hello(GAME_DESCRIPTION, $game);
+    hello(GAME_DESCRIPTION, $game) ;
 }

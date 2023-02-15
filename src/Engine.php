@@ -24,5 +24,5 @@ function hello(string $question, array $game)
             return;
         }
     }
-    line("Congratulations, {$name}!");
+    line("Congratulations, {$name}!") ;
 }
