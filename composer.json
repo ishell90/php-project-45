@@ -7,8 +7,8 @@
             "src/Games/Parity.php",
             "src/Games/Calc.php",
             "src/Engine.php",
-            "src/Games/gcd.php",
-            "src/Games/progression.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
             "src/Games/Prime.php"
         ]
     },
