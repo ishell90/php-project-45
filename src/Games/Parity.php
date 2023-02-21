@@ -4,7 +4,7 @@ namespace BrainGames\Games\Even;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Hello\hello;
+use function BrainGames\Hello\runGame;
 
 use const BrainGames\Hello\ROUND_COUNT;
 
@@ -22,5 +22,5 @@ function parityone()
             $game[] = [$rand, 'no'];
         }
     }
-    hello(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $game);
 }

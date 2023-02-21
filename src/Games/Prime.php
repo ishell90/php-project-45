@@ -4,7 +4,7 @@ namespace BrainGames\Games\prime;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Hello\hello;
+use function BrainGames\Hello\runGame;
 
 use const BrainGames\Hello\ROUND_COUNT;
 
@@ -33,5 +33,5 @@ function prime()
         $correctAnswer = isPrime($randNumber) ? 'yes' : 'no';
         $game[] = [$randNumber, $correctAnswer];
     }
-    hello(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $game);
 }

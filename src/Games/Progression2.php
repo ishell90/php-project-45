@@ -4,7 +4,7 @@ namespace BrainGames\Games\progression;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Hello\hello;
+use function BrainGames\Hello\runGame;
 
 use const BrainGames\Hello\ROUND_COUNT;
 
@@ -39,5 +39,5 @@ function progression()
         $finish = implode(" ", $arr);
         $game[] = [$finish, $memory];
     }
-    hello(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $game);
 }

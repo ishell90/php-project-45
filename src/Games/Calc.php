@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Hello\hello;
+use function BrainGames\Hello\runGame;
 
 use const BrainGames\Hello\ROUND_COUNT;
 
@@ -17,24 +17,24 @@ function calculation()
         $randOne = rand(1, 30);
         $randTwo = rand(1, 30);
         $signs = ['+', '-', '*'];
-        $randSign = array_rand($signs, 1);
+        $randSign = $signs[array_rand($signs)];
         switch ($randSign) {
-            case 0:
+            case '+':
                 $question = "{$randOne} + {$randTwo}";
                 $correctAnswer = (string) ($randOne + $randTwo);
                 $game[] = [$question, $correctAnswer];
                 break;
-            case 1:
+            case '-':
                 $question = "{$randOne} - {$randTwo}";
                 $correctAnswer = (string) ($randOne - $randTwo);
                 $game[] = [$question, $correctAnswer];
                 break;
-            case 2:
+            case '*':
                 $question = "{$randOne} * {$randTwo}";
                 $correctAnswer = (string) ($randOne * $randTwo);
                 $game[] = [$question, $correctAnswer];
                 break;
         }
     }
-    hello(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $game);
 }
