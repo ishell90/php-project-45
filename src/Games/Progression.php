@@ -12,7 +12,7 @@ const GAME_DESCRIPTION = "What number is missing in the progression?";
 
 function progression()
 {
-    $game = [];
+    $aGame = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randStart = rand(0, 30);
         $randProfile = rand(1, 3);
@@ -37,7 +37,7 @@ function progression()
         $memory = (string) ($arr[$randReplacement]);
         $arr[$randReplacement] = "..";
         $finish = implode(" ", $arr);
-        $game[] = [$finish, $memory];
+        $aGame[] = [$finish, $memory];
     }
-    runGame(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $aGame);
 }

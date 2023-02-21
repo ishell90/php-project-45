@@ -12,15 +12,15 @@ const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "
 
 function parityone()
 {
-    $game = [];
+    $aGame = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $rand = rand(0, 20);
         $proverka = $rand % 2;
         if ($proverka === 0) {
-            $game[] = [$rand, 'yes'];
+            $aGame[] = [$rand, 'yes'];
         } else {
-            $game[] = [$rand, 'no'];
+            $aGame[] = [$rand, 'no'];
         }
     }
-    runGame(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $aGame);
 }

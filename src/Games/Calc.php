@@ -12,7 +12,7 @@ const GAME_DESCRIPTION = "What is the result of the expression?";
 
 function calculation()
 {
-    $game = [];
+    $aGame = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randOne = rand(1, 30);
         $randTwo = rand(1, 30);
@@ -22,19 +22,19 @@ function calculation()
             case '+':
                 $question = "{$randOne} + {$randTwo}";
                 $correctAnswer = (string) ($randOne + $randTwo);
-                $game[] = [$question, $correctAnswer];
+                $aGame[] = [$question, $correctAnswer];
                 break;
             case '-':
                 $question = "{$randOne} - {$randTwo}";
                 $correctAnswer = (string) ($randOne - $randTwo);
-                $game[] = [$question, $correctAnswer];
+                $aGame[] = [$question, $correctAnswer];
                 break;
             case '*':
                 $question = "{$randOne} * {$randTwo}";
                 $correctAnswer = (string) ($randOne * $randTwo);
-                $game[] = [$question, $correctAnswer];
+                $aGame[] = [$question, $correctAnswer];
                 break;
         }
     }
-    runGame(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $aGame);
 }

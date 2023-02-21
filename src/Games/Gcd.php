@@ -12,7 +12,7 @@ const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function gcd()
 {
-    $game = [];
+    $aGame = [];
     for ($j = 0; $j < ROUND_COUNT; $j++) {
         $randOne = rand(1, 100);
         $randTwo = rand(1, 100);
@@ -27,7 +27,7 @@ function gcd()
         }
         $correctAnswer = (string) $twoNumber;
         $question = "{$randOne} {$randTwo}";
-        $game[] = [$question, $correctAnswer];
+        $aGame[] = [$question, $correctAnswer];
     }
-    runGame(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $aGame);
 }

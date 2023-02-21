@@ -27,11 +27,11 @@ function isPrime(int $num): bool
 
 function prime()
 {
-    $game = [];
+    $aGame = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randNumber = rand(2, 100);
         $correctAnswer = isPrime($randNumber) ? 'yes' : 'no';
-        $game[] = [$randNumber, $correctAnswer];
+        $aGame[] = [$randNumber, $correctAnswer];
     }
-    runGame(GAME_DESCRIPTION, $game);
+    runGame(GAME_DESCRIPTION, $aGame);
 }
