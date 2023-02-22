@@ -15,8 +15,8 @@ function parityone()
     $aGame = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $rand = rand(0, 20);
-        $proverka = $rand % 2;
-        if ($proverka === 0) {
+        $parity = $rand % 2;
+        if ($parity === 0) {
             $aGame[] = [$rand, 'yes'];
         } else {
             $aGame[] = [$rand, 'no'];

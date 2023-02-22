@@ -17,26 +17,25 @@ function progression()
         $randStart = rand(0, 30);
         $randProfile = rand(1, 3);
         $randReplacement = rand(0, 9);
-        $arr = [];
-        $arr2 = [];
-        for ($j = 0, $sum1 = 0; $sum1 < 10; $j++) {
+        $subsequence = [];
+        for ($j = 0, $numberCount = 0; $numberCount < 10; $j++) {
             if ($randProfile === 1) {
                 $result = $randStart + ($j * 3);
-                $arr[] = $result;
-                $sum1++;
+                $subsequence[] = $result;
+                $numberCount++;
             } elseif ($randProfile === 2) {
                 $result = $randStart + ($j * 5);
-                $arr[] = $result;
-                $sum1++;
+                $subsequence[] = $result;
+                $numberCount++;
             } else {
                 $result = $randStart + ($j * 7);
-                $arr[] = $result;
-                $sum1++;
+                $subsequence[] = $result;
+                $numberCount++;
             }
         }
-        $memory = (string) ($arr[$randReplacement]);
-        $arr[$randReplacement] = "..";
-        $finish = implode(" ", $arr);
+        $memory = (string) ($subsequence[$randReplacement]);
+        $subsequence[$randReplacement] = "..";
+        $finish = implode(" ", $subsequence);
         $aGame[] = [$finish, $memory];
     }
     runGame(GAME_DESCRIPTION, $aGame);
