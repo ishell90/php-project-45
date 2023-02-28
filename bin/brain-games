@@ -1,6 +1,6 @@
 #!/usr/bin/env php
-
 <?php
+
 use BrainGames\Cli;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';

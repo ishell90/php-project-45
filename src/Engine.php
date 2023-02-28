@@ -1,18 +1,18 @@
 <?php
 
-namespace BrainGames\Hello;
+namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
 const ROUND_COUNT = 3;
 
-function runGame(string $question, array $game)
+function runGame(string $descriptionGame, array $game)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line($question);
+    line($descriptionGame);
     foreach ($game as [$questionGame, $answerGood]) {
         line("Question: {$questionGame}");
         $userAnswer = prompt('Your answer');

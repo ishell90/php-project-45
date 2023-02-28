@@ -12,4 +12,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-print_r(gcd\gcd());
+print_r(gcd\findGcd());

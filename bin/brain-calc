@@ -12,4 +12,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-print_r(Calc\calculation());
+print_r(Calc\runCalculation());

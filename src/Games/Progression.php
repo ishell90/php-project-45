@@ -1,18 +1,16 @@
 <?php
 
-namespace BrainGames\Games\progression;
+namespace BrainGames\Games\Progression;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Hello\runGame;
+use function BrainGames\Engine\runGame;
 
-use const BrainGames\Hello\ROUND_COUNT;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const GAME_DESCRIPTION = "What number is missing in the progression?";
 
-function progression()
+function createProgression()
 {
-    $aGame = [];
+    $questionsAndAnswers = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randStart = rand(0, 30);
         $randProfile = rand(1, 3);
@@ -36,7 +34,7 @@ function progression()
         $memory = (string) ($subsequence[$randReplacement]);
         $subsequence[$randReplacement] = "..";
         $finish = implode(" ", $subsequence);
-        $aGame[] = [$finish, $memory];
+        $questionsAndAnswers[] = [$finish, $memory];
     }
-    runGame(GAME_DESCRIPTION, $aGame);
+    runGame(GAME_DESCRIPTION, $questionsAndAnswers);
 }

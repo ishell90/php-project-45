@@ -1,26 +1,24 @@
 <?php
 
-namespace BrainGames\Games\Even;
+namespace BrainGames\Games\Parity;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Hello\runGame;
+use function BrainGames\Engine\runGame;
 
-use const BrainGames\Hello\ROUND_COUNT;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function parityone()
+function isParity()
 {
-    $aGame = [];
+    $questionsAndAnswers = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $rand = rand(0, 20);
         $parity = $rand % 2;
         if ($parity === 0) {
-            $aGame[] = [$rand, 'yes'];
+            $questionsAndAnswers[] = [$rand, 'yes'];
         } else {
-            $aGame[] = [$rand, 'no'];
+            $questionsAndAnswers[] = [$rand, 'no'];
         }
     }
-    runGame(GAME_DESCRIPTION, $aGame);
+    runGame(GAME_DESCRIPTION, $questionsAndAnswers);
 }

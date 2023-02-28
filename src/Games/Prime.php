@@ -1,12 +1,10 @@
 <?php
 
-namespace BrainGames\Games\prime;
+namespace BrainGames\Games\Prime;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Hello\runGame;
+use function BrainGames\Engine\runGame;
 
-use const BrainGames\Hello\ROUND_COUNT;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -25,13 +23,13 @@ function isPrime(int $num): bool
     return true;
 }
 
-function prime()
+function runPrime()
 {
-    $aGame = [];
+    $questionsAndAnswers = [];
     for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randNumber = rand(2, 100);
         $correctAnswer = isPrime($randNumber) ? 'yes' : 'no';
-        $aGame[] = [$randNumber, $correctAnswer];
+        $questionsAndAnswers[] = [$randNumber, $correctAnswer];
     }
-    runGame(GAME_DESCRIPTION, $aGame);
+    runGame(GAME_DESCRIPTION, $questionsAndAnswers);
 }
